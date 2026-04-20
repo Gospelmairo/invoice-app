@@ -1,0 +1,60 @@
+/* ── Design tokens ── */
+:root {
+  --color-accent:    #7c5dfa;
+  --color-accent-2:  #9277ff;
+}
+
+[data-theme="dark"] {
+  --color-bg:        #141625;
+  --color-sidebar:   #1e2139;
+  --color-card:      #1e2139;
+  --color-input-bg:  #252945;
+  --color-border:    #252945;
+  --color-text:      #ffffff;
+  --color-text-muted:#dfe3fa;
+}
+
+[data-theme="light"] {
+  --color-bg:        #f8f8fb;
+  --color-sidebar:   #373b53;
+  --color-card:      #ffffff;
+  --color-input-bg:  #f9fafe;
+  --color-border:    #dfe3fa;
+  --color-text:      #0c0e16;
+  --color-text-muted:#888eb0;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Spartan', 'League Spartan', system-ui, sans-serif;
+  font-size: 15px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ── Layout ── */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.app-main {
+  flex: 1;
+  margin-left: 72px;
+  overflow-x: hidden;
+}
+
+@media (max-width: 767px) {
+  .app-layout { flex-direction: column; }
+  .app-main   { margin-left: 0; }
+}
+
+h1, h2, h3 { letter-spacing: -0.5px; }

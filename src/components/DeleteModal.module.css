@@ -1,0 +1,58 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 24px;
+}
+
+.modal {
+  background: var(--color-card);
+  border-radius: 8px;
+  padding: 48px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+.body {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.btnCancel, .btnDelete {
+  padding: 16px 24px;
+  border: none;
+  border-radius: 24px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btnCancel { background: var(--color-input-bg); color: var(--color-text-muted); }
+.btnDelete { background: #ec5757; color: #fff; }
+
+.btnCancel:hover { opacity: 0.8; }
+.btnDelete:hover { background: #ff9797; }
+
+.btnCancel:focus-visible,
+.btnDelete:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
