@@ -1,4 +1,4 @@
-# Invoice Management App — HNG Stage 2
+# Invoice Management App
 
 A fully responsive, accessible invoice management application built with React and Vite.
 
